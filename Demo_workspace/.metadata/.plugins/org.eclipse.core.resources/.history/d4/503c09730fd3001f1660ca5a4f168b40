@@ -1,0 +1,5 @@
+package com.samyak.product.services;
+
+public class ProductService {
+
+}

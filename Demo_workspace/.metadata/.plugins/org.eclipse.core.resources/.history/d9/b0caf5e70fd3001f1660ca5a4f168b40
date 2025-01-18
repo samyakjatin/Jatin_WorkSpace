@@ -1,0 +1,5 @@
+package com.samyak.product.repository;
+
+public class ProductRepository {
+
+}

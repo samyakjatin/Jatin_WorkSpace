@@ -1,0 +1,5 @@
+package com.samyak.product.domain;
+
+public class MyProduct {
+
+}
