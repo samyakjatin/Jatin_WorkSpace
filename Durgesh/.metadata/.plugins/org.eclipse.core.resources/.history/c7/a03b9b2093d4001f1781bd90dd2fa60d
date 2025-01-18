@@ -1,0 +1,6 @@
+package com.Durgesh.Durgesh.dao;
+
+public interface CourseDao {
+
+	
+}

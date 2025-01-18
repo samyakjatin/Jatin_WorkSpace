@@ -1,0 +1,52 @@
+
+
+
+#form {
+    background-color: #fef9e1;
+    border-radius: 10px;
+    border-style: solid;
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-top: 200px;
+  }
+  
+  /* Form layout */
+  .form-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    
+  }
+  
+  /* Heading style */
+  .form-header {
+    margin-left: 60px;
+    margin-right: 60px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+  }
+  
+  /* Input fields */
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* Styling for confirm password input */
+  .confirm-password {
+    margin-top: 17px;
+  }
+  

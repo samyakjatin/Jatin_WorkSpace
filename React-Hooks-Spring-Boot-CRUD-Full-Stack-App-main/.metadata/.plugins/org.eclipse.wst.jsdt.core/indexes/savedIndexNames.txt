@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\React-Hooks-Spring-Boot-CRUD-Full-Stack-App-main\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+86114198.index

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Scanner</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Light Blue */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff; /* White */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        #response {
+            margin-top: 30px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #333;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-container button {
+            width: 48%;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>RFID Scanner Controls</h1>
+
+        <!-- Connect and Disconnect Buttons -->
+        <div class="form-group">
+            <button onclick="connect()" style="margin-bottom: 20px;">Connect</button>
+            <button onclick="disconnect()">Disconnect</button>
+        </div>
+
+        <!-- Start and Stop Scan Buttons -->
+        <div class="btn-container">
+            <button onclick="startScan()" >Start Scan</button>
+            <button onclick="stopScan()">Stop Scan</button>
+        </div>
+
+        <!-- Get Scanned Items Button -->
+        <div class="form-group">
+            <button onclick="getScannedItems()">Get Scanned Items</button>
+        </div>
+
+        <!-- Read Tags Inputs -->
+        <div class="form-group">
+            <div class="input-group">
+                <label for="clientID">Client ID</label>
+                <input type="text" id="clientID" placeholder="Client ID" value="IRYS_CONSOLE">
+            </div>
+
+            <div class="input-group">
+                <label for="host">Host IP</label>
+                <input type="text" id="host" placeholder="Host IP" value="192.168.1.101">
+            </div>
+
+            <div class="input-group">
+                <label for="make">Make</label>
+                <input type="text" id="make" placeholder="Make" value="FLATBED">
+            </div>
+
+            <div class="input-group">
+                <label for="power">Power (0-30)</label>
+                <input type="number" id="power" placeholder="Power" value="30">
+            </div>
+
+            <button onclick="readTags()">Read Tags</button>
+        </div>
+
+        <!-- Response Output -->
+        <div id="response">
+            <h2>Response</h2>
+            <pre id="responseOutput"></pre>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
