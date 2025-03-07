@@ -1,0 +1,14 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/durgesh?allowPublicKeyRetrieval=true&useSSL=false
+spring.datasource.username=root
+spring.datasource.password=admin123
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
+
+spring.jpa.hibernate.ddl-auto = update
+
+# Enable OpenAPI/Swagger UI
+springdoc.swagger-ui.enabled=true
+
+# If your application uses a custom context path:
+server.servlet.context-path=/api
+
